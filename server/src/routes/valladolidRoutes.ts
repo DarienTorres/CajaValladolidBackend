@@ -18,10 +18,14 @@ class ValladolidRoutes{
        this.router.post('/',valladolidController.create);
 
        //ruta para eliminar
-       this.router.delete('/:id',valladolidController.delete)
+       this.router.delete('/clientes/list/:id',valladolidController.delete);
+      
 
         //ruta para editar
-        this.router.put('/:id',valladolidController.update)
+        this.router.put('/:id',valladolidController.update);
+
+        //ruta para consultar todos los clientes activos
+        this.router.get('/clientes/list',valladolidController.listclient) ;
 
     }
 }
